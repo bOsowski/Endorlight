@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+class GameObject;
+
+class HealthComponent{
+    
+};
+
 #endif /* HealthComponent_hpp */

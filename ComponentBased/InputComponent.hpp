@@ -10,6 +10,9 @@
 #define InputComponent_hpp
 
 #include "GameObject.hpp"
+
+class GameObject;
+
 class InputComponent
 {
 public:

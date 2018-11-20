@@ -1,18 +1,19 @@
 //
 //  PhysicsComponent.hpp
-//  ComponentBased
+//  AssetManagerv1
 //
-//  Created by Denis Flynn on 31/10/2018.
+//  Created by Bartosz Osowski on 20/11/2018.
 //  Copyright © 2018 Denis Flynn. All rights reserved.
 //
-
-
+#pragma once
 #ifndef PhysicsComponent_hpp
 #define PhysicsComponent_hpp
+
+#include <stdio.h>
 #include "GameObject.hpp"
 
 class GameObject;
-
+class World;
 
 class PhysicsComponent
 {

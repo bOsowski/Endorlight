@@ -10,8 +10,20 @@
 #define GameObject_hpp
 
 #include <stdio.h>
+#include "GraphicsComponent.hpp"
+#include "PhysicsComponent.hpp"
+#include "Components.hpp"
 
-class GameObject{
-    
+class GraphicsComponent;
+class PhysicsComponent;
+class InputComponent;
+
+class GameObject
+{
+public:
+    int velocity;
+    int x, y;
+
+    void update(World& world, GraphicsComponent& graphics){};
 };
 #endif /* GameObject_hpp */
