@@ -132,7 +132,7 @@ sf::Text Game::utilityFn(float val, sf::Vector2i pos)
     sfTxt.setString(s);
     sfTxt.setFont(m_font);
     sfTxt.setCharacterSize(10);//magic number - change based on tilesize
-    sfTxt.setFillColor(sf::Color::Black);
+    sfTxt.setFillColor(sf::Color::White);
     
     sf::Vector2f text_pos;
     text_pos= m_map.GetActualTileLocation(pos.x,pos.y);
@@ -141,7 +141,7 @@ sf::Text Game::utilityFn(float val, sf::Vector2i pos)
     return sfTxt;
 }
 void Game::Render(){
-    sf::Color color = sf::Color::White;
+    sf::Color color = sf::Color::Black;
     m_window.BeginDraw();
     // Render here.
     m_window.GetRenderWindow()->draw(this->m_map);
@@ -158,11 +158,24 @@ void Game::Render(){
             location=m_map.GetActualTileLocation(j,i);
             //if (m_imap->getCellValue(j, i)<0.0)
             //{
-            color.r=m_imap->getCellValue(j, i)*128/3+128;
-            color.g=m_imap->getCellValue(j, i)*128/3+128;
-            color.b=m_imap->getCellValue(j, i)*128/3+128;
+            //-1.8 = red   ...     1.8 = blue
+//            color.r=m_imap->getCellValue(j, i)*128/3+128*-1;
+//            color.g=m_imap->getCellValue(j, i)*128/3+128;
+            if(m_imap->getCellValue(j, i) < 0){
+                color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
+                color.r=-1*(m_imap->getCellValue(j, i)*128/2.5+128);
+            }
+            if(m_imap->getCellValue(j, i) > 0){
+                color.r=-1*m_imap->getCellValue(j, i)*128/2.5+128;
+                color.b=m_imap->getCellValue(j, i)*128/2.5+128;
+            }
+            if(m_imap->getCellValue(j, i) == 0){
+                color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
+                color.r=(m_imap->getCellValue(j, i)*128/2.5+128);
+            }
             m_map.rectangeOnTile(sf::Vector2i(i,j),color );
             // }
+
             sfTextArr.push_back(utilityFn(m_imap->getCellValue(j, i),sf::Vector2i(j,i)) );
         }
     //map.printOnTile(s,location);

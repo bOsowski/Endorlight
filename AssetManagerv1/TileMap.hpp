@@ -152,8 +152,8 @@ public:
         
         
         m_rectangle.setSize(sf::Vector2f(tileSize.x, tileSize.y));
-        m_rectangle.setOutlineColor(sf::Color::Yellow);
-        m_rectangle.setOutlineThickness(5);
+        m_rectangle.setOutlineColor(sf::Color::Black);
+        m_rectangle.setOutlineThickness(1);
         
         
         // populate the vertex array, with one quad per tile
