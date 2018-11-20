@@ -83,32 +83,20 @@ void Game::Update(){
         sf::Vector2i playerPosition = m_map.GetActualTileLocation(m_player.GetPosition());
         sf::Vector2i  ePlayerPosition = m_map.GetActualTileLocation(m_ePlayer.GetPosition());
         
+        m_imap->clear();//if not done here,
         if(oldPlayerPosition!=playerPosition){
-            m_imap->clear();//everytime player moves to new tile, reset influencemap calculation
             m_imap->setCellValue(playerPosition.x,playerPosition.y, 30);//m_player.getInfluence());
-            
-            m_imap->propValue(0.1, GameIMap::PropCurve::Linear);
-            //both player and enemys need to be updated as imap has been cleared at start
-            m_imap->propagateInfluence(playerPosition.x,playerPosition.y, 10, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(ePlayerPosition.x,ePlayerPosition.y, 10, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(playerPosition.x,playerPosition.y, 10, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(ePlayerPosition.x,ePlayerPosition.y, 10, GameIMap::PropCurve::Linear);
         }
-        
         //if enemy position changes, update influence map
         if(old_E_PlayerPosition!=ePlayerPosition){
-            m_imap->clear();//if not done here,
             m_imap->setCellValue(ePlayerPosition.x,ePlayerPosition.y,m_ePlayer.getInfluence());
-            m_imap->propValue(0.1, GameIMap::PropCurve::Linear);
-            
-            //both player and enemys need to be updated as imap has been cleared at start
-            m_imap->propagateInfluence(playerPosition.x,playerPosition.y, 5, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(ePlayerPosition.x,ePlayerPosition.y, 5, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(playerPosition.x,playerPosition.y, 10, GameIMap::PropCurve::Linear);
-            m_imap->propagateInfluence(ePlayerPosition.x,ePlayerPosition.y, 10, GameIMap::PropCurve::Linear);
-            
         }
-        
+            //both player and enemys need to be updated as imap has been cleared at start
+        for(int i = 0; i<2; i++){
+            m_imap->propagateInfluence(ePlayerPosition.x,ePlayerPosition.y, 10, GameIMap::PropCurve::Linear, -1);
+            m_imap->propagateInfluence(playerPosition.x,playerPosition.y, 10, GameIMap::PropCurve::Linear, 1);
+        }
+
         
         
         if (updateCounterIMap%1000==0)

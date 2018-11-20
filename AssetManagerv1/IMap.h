@@ -63,7 +63,7 @@ namespace GameIMap
 			}
 		}
 		void propagateInfluence(int _centerX, int _centerY, int _radius, PropCurve _propType, float _magnitude = 1.0f)
-		{
+        {
 			if (_centerX < 0 || _centerX >= m_iWidth || _centerY < 0 || _centerY >= m_iHeight) return;
 
 			int startX = _centerX - _radius;
@@ -87,11 +87,13 @@ namespace GameIMap
 				}
 			}
 		}
+        
 		float getNormalizedDistance(float _y, float _centerY, float _x, float _centerX, float _radius)
 		{
 			float result = sqrt((_y - _centerY) * (_y - _centerY) + (_x - _centerX) * (_x - _centerX)) / _radius;
 			return (result > 1) ? 1 : result;
 		}
+        
 		float propValue(float _distance, PropCurve _propCurve)
 		{
 			assert(_distance >= 0.0f && _distance <= 1.0f);
@@ -106,6 +108,7 @@ namespace GameIMap
 				break;
 			}
 		}
+        
 		void copyMap(InfluenceMap* _sourceMap, float _magnitude = 1.0f)
 		{
 			if (_sourceMap == nullptr) return;
@@ -119,6 +122,7 @@ namespace GameIMap
 				}
 			}
 		}
+        
 		void addMap(InfluenceMap* _sourceMap, float _magnitude = 1.0f)
 		{
 			if (_sourceMap == nullptr) return;
