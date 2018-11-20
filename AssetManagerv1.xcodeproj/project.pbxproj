@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08291B9921A4AA060089A6C8 /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08291B9721A4AA060089A6C8 /* GameObject.cpp */; };
 		9E0989B3216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0989B2216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png */; };
 		9E0989B5216495B9008EEF7F /* Sprite-0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0989B4216495B9008EEF7F /* Sprite-0001.png */; };
 		9E0989B82164991A008EEF7F /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E0989B62164991A008EEF7F /* Object.cpp */; };
@@ -59,7 +60,7 @@
 		9E4C46A32152212400D556FD /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C469A2152212300D556FD /* arial.ttf */; };
 		9E4C46A42152212400D556FD /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C469B2152212300D556FD /* Window.cpp */; };
 		9E4C46A62152212400D556FD /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C469F2152212400D556FD /* Game.cpp */; };
-		9E4C46A72152212400D556FD /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C46A02152212400D556FD /* Main.cpp */; };
+		9E4C46A72152212400D556FD /* Main_cmpt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C46A02152212400D556FD /* Main_cmpt.cpp */; };
 		9E4C46AB2152233300D556FD /* forestin.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C46A82152233200D556FD /* forestin.csv */; };
 		9E4C46AC2152233300D556FD /* LPCMap.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C46A92152233200D556FD /* LPCMap.csv */; };
 		9E4C46B02152270200D556FD /* TileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C46AE2152270200D556FD /* TileMap.cpp */; };
@@ -71,8 +72,6 @@
 		9EF4D9752188F0F400090A3B /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4D9742188F0F400090A3B /* nice_music.ogg */; };
 		9EF4D9772188F0F400090A3B /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4D9762188F0F400090A3B /* sansation.ttf */; };
 		9EF4D9792188F0F400090A3B /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF4D9782188F0F400090A3B /* icon.png */; };
-		9EF4D97E2188F28500090A3B /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C469B2152212300D556FD /* Window.cpp */; };
-		9EF4D97F2188F2B000090A3B /* TileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C46AE2152270200D556FD /* TileMap.cpp */; };
 		9EF4D98A2188F7C900090A3B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9EF4D96F2188F0F400090A3B /* main.cpp */; };
 		9EF4D98B2188F84D00090A3B /* Components.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E098A2F216D4D1F008EEF7F /* Components.cpp */; };
 		9EF4D98D2188FB1500090A3B /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E098A2C216D4CC8008EEF7F /* GameObject.cpp */; };
@@ -80,6 +79,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08291B9721A4AA060089A6C8 /* GameObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameObject.cpp; sourceTree = "<group>"; };
+		08291B9821A4AA060089A6C8 /* GameObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameObject.hpp; sourceTree = "<group>"; };
 		9E0989B2216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rogue spritesheet calciumtrice_0.png"; sourceTree = "<group>"; };
 		9E0989B4216495B9008EEF7F /* Sprite-0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprite-0001.png"; sourceTree = "<group>"; };
 		9E0989B62164991A008EEF7F /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
@@ -169,7 +170,7 @@
 		9E4C469A2152212300D556FD /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
 		9E4C469B2152212300D556FD /* Window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		9E4C469F2152212400D556FD /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
-		9E4C46A02152212400D556FD /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		9E4C46A02152212400D556FD /* Main_cmpt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main_cmpt.cpp; sourceTree = "<group>"; };
 		9E4C46A82152233200D556FD /* forestin.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = forestin.csv; sourceTree = "<group>"; };
 		9E4C46A92152233200D556FD /* LPCMap.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LPCMap.csv; sourceTree = "<group>"; };
 		9E4C46AE2152270200D556FD /* TileMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TileMap.cpp; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		9EF4D9742188F0F400090A3B /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		9EF4D9762188F0F400090A3B /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		9EF4D9782188F0F400090A3B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		9EF4D9822188F5F500090A3B /* Main_cmpt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main_cmpt.cpp; sourceTree = "<group>"; };
 		9EF4D9862188F73B00090A3B /* GameCmpt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameCmpt.cpp; sourceTree = "<group>"; };
 		9EF4D9892188F75C00090A3B /* GameCmpt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameCmpt.hpp; path = ComponentBased/GameCmpt.hpp; sourceTree = SOURCE_ROOT; };
 		9EFDC1DF21939371003AC60C /* tileset_bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset_bw.png; sourceTree = "<group>"; };
@@ -211,6 +211,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08291B9021A49DAF0089A6C8 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		08291B9121A49DBE0089A6C8 /* game_objects */ = {
+			isa = PBXGroup;
+			children = (
+				9E0989B62164991A008EEF7F /* Object.cpp */,
+				9E0989B72164991A008EEF7F /* Object.h */,
+				9E8768A82198BD2100C0D9D0 /* particle.cpp */,
+				9E8768A92198BD2100C0D9D0 /* particle.hpp */,
+				9E0989C221649D11008EEF7F /* Player.cpp */,
+				9E0989C121649CD6008EEF7F /* Player.h */,
+				9E098AC12175FAB6008EEF7F /* evilPlayer.cpp */,
+				9E098AC22175FAB6008EEF7F /* evilPlayer.hpp */,
+				08291B9721A4AA060089A6C8 /* GameObject.cpp */,
+				08291B9821A4AA060089A6C8 /* GameObject.hpp */,
+				9E098A60216D7716008EEF7F /* Enemy.cpp */,
+				9E098A61216D7716008EEF7F /* Enemy.hpp */,
+				9E0989BC21649BCE008EEF7F /* Entity.cpp */,
+				9E0989BB21649BC6008EEF7F /* Entity.h */,
+			);
+			name = game_objects;
+			sourceTree = "<group>";
+		};
+		08291B9221A49DEE0089A6C8 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				9E0989BF21649C39008EEF7F /* TextureManager.cpp */,
+				9E0989BE21649C2F008EEF7F /* TextureManager.h */,
+			);
+			name = managers;
+			sourceTree = "<group>";
+		};
+		08291B9321A49DFB0089A6C8 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E0989B921649B39008EEF7F /* utils.h */,
+				9E0989C521649D4A008EEF7F /* Input.cpp */,
+				9E0989C421649D3B008EEF7F /* Input.h */,
+				9E4C43D0214EE2CE00D556FD /* ResourcePath.hpp */,
+				9E4C43CE214EE2CE00D556FD /* ResourcePath.mm */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		08291B9421A49E0F0089A6C8 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C469A2152212300D556FD /* arial.ttf */,
+				9E0989BA21649B8C008EEF7F /* enums.h */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		08291B9521A49E280089A6C8 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C469B2152212300D556FD /* Window.cpp */,
+				9E4C46982152212300D556FD /* Window.h */,
+				9E4C46AE2152270200D556FD /* TileMap.cpp */,
+				9E4C46AF2152270200D556FD /* TileMap.hpp */,
+				9E4C46A02152212400D556FD /* Main_cmpt.cpp */,
+				9E098A32216D711B008EEF7F /* Level.cpp */,
+				9E098A33216D711C008EEF7F /* Level.hpp */,
+				9E4C469F2152212400D556FD /* Game.cpp */,
+				9E4C46952152212200D556FD /* Game.h */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
 		9E098A35216D742B008EEF7F /* tiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,41 +361,16 @@
 		9E4C43CB214EE2CE00D556FD /* AssetManagerv1 */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C469A2152212300D556FD /* arial.ttf */,
-				9E098A60216D7716008EEF7F /* Enemy.cpp */,
-				9E098A61216D7716008EEF7F /* Enemy.hpp */,
-				9E0989BC21649BCE008EEF7F /* Entity.cpp */,
-				9E0989BB21649BC6008EEF7F /* Entity.h */,
-				9E0989BA21649B8C008EEF7F /* enums.h */,
-				9E098AC12175FAB6008EEF7F /* evilPlayer.cpp */,
-				9E098AC22175FAB6008EEF7F /* evilPlayer.hpp */,
+				08291B9521A49E280089A6C8 /* main */,
+				08291B9421A49E0F0089A6C8 /* other */,
+				08291B9321A49DFB0089A6C8 /* utils */,
+				08291B9221A49DEE0089A6C8 /* managers */,
+				08291B9121A49DBE0089A6C8 /* game_objects */,
+				08291B9021A49DAF0089A6C8 /* components */,
 				9E223458217FB96100B13E32 /* game-imap */,
 				9E22345B217FB96200B13E32 /* game-math */,
-				9E4C469F2152212400D556FD /* Game.cpp */,
-				9E4C46952152212200D556FD /* Game.h */,
-				9E0989C521649D4A008EEF7F /* Input.cpp */,
-				9E0989C421649D3B008EEF7F /* Input.h */,
-				9E098A32216D711B008EEF7F /* Level.cpp */,
-				9E098A33216D711C008EEF7F /* Level.hpp */,
-				9EF4D9822188F5F500090A3B /* Main_cmpt.cpp */,
-				9E4C46A02152212400D556FD /* Main.cpp */,
-				9E0989B62164991A008EEF7F /* Object.cpp */,
-				9E0989B72164991A008EEF7F /* Object.h */,
-				9E8768A82198BD2100C0D9D0 /* particle.cpp */,
-				9E8768A92198BD2100C0D9D0 /* particle.hpp */,
-				9E0989C221649D11008EEF7F /* Player.cpp */,
-				9E0989C121649CD6008EEF7F /* Player.h */,
-				9E4C43D0214EE2CE00D556FD /* ResourcePath.hpp */,
-				9E4C43CE214EE2CE00D556FD /* ResourcePath.mm */,
 				9E4C43D3214EE2CE00D556FD /* Resources */,
 				9E4C43CC214EE2CE00D556FD /* Supporting Files */,
-				9E0989BF21649C39008EEF7F /* TextureManager.cpp */,
-				9E0989BE21649C2F008EEF7F /* TextureManager.h */,
-				9E4C46AE2152270200D556FD /* TileMap.cpp */,
-				9E4C46AF2152270200D556FD /* TileMap.hpp */,
-				9E0989B921649B39008EEF7F /* utils.h */,
-				9E4C469B2152212300D556FD /* Window.cpp */,
-				9E4C46982152212300D556FD /* Window.h */,
 			);
 			path = AssetManagerv1;
 			sourceTree = "<group>";
@@ -592,10 +641,11 @@
 				9E0989C321649D11008EEF7F /* Player.cpp in Sources */,
 				9E0989C621649D4A008EEF7F /* Input.cpp in Sources */,
 				9E4C43CF214EE2CE00D556FD /* ResourcePath.mm in Sources */,
-				9E4C46A72152212400D556FD /* Main.cpp in Sources */,
+				9E4C46A72152212400D556FD /* Main_cmpt.cpp in Sources */,
 				9E0989BD21649BCF008EEF7F /* Entity.cpp in Sources */,
 				9E4C46A62152212400D556FD /* Game.cpp in Sources */,
 				9E0989C021649C39008EEF7F /* TextureManager.cpp in Sources */,
+				08291B9921A4AA060089A6C8 /* GameObject.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,11 +655,9 @@
 			files = (
 				9E45A8012189E95700528FD1 /* HealthComponent.cpp in Sources */,
 				9EF4D96D2188F0F400090A3B /* ResourcePath.mm in Sources */,
-				9EF4D97F2188F2B000090A3B /* TileMap.cpp in Sources */,
 				9EF4D98A2188F7C900090A3B /* main.cpp in Sources */,
 				9E45A7FE2189E94500528FD1 /* PhysicsComponent.cpp in Sources */,
 				9EF4D98B2188F84D00090A3B /* Components.cpp in Sources */,
-				9EF4D97E2188F28500090A3B /* Window.cpp in Sources */,
 				9E45A7FB2189E93100528FD1 /* GraphicsComponent.cpp in Sources */,
 				9EF4D98D2188FB1500090A3B /* GameObject.cpp in Sources */,
 				9E45A8042189E96700528FD1 /* AIComponent.cpp in Sources */,
@@ -660,6 +708,7 @@
 					/usr/local/include/,
 					"$(inherited)",
 				);
+				INFOPLIST_FILE = "AssetManagerv1/AssetManagerv1-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
@@ -729,6 +778,7 @@
 					/usr/local/include/,
 					"$(inherited)",
 				);
+				INFOPLIST_FILE = "AssetManagerv1/AssetManagerv1-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib/,
 					"$(inherited)",
