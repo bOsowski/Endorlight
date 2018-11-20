@@ -303,12 +303,12 @@
 				9E0989C421649D3B008EEF7F /* Input.h */,
 				9E098A32216D711B008EEF7F /* Level.cpp */,
 				9E098A33216D711C008EEF7F /* Level.hpp */,
-				9E4C46A02152212400D556FD /* Main.cpp */,
-				9E8768A82198BD2100C0D9D0 /* particle.cpp */,
-				9E8768A92198BD2100C0D9D0 /* particle.hpp */,
 				9EF4D9822188F5F500090A3B /* Main_cmpt.cpp */,
+				9E4C46A02152212400D556FD /* Main.cpp */,
 				9E0989B62164991A008EEF7F /* Object.cpp */,
 				9E0989B72164991A008EEF7F /* Object.h */,
+				9E8768A82198BD2100C0D9D0 /* particle.cpp */,
+				9E8768A92198BD2100C0D9D0 /* particle.hpp */,
 				9E0989C221649D11008EEF7F /* Player.cpp */,
 				9E0989C121649CD6008EEF7F /* Player.h */,
 				9E4C43D0214EE2CE00D556FD /* ResourcePath.hpp */,
@@ -464,7 +464,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9E4C43C3214EE2CE00D556FD /* Build configuration list for PBXProject "AssetManagerv1" */;
+			buildConfigurationList = 9E4C43C3214EE2CE00D556FD /* Build configuration list for PBXProject "assetmanagerv1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -812,7 +812,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E4C43C3214EE2CE00D556FD /* Build configuration list for PBXProject "AssetManagerv1" */ = {
+		9E4C43C3214EE2CE00D556FD /* Build configuration list for PBXProject "assetmanagerv1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E4C43DC214EE2CE00D556FD /* Debug */,

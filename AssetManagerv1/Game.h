@@ -32,6 +32,8 @@ public:
 private:
 	Window m_window;
      const int numTiles=1024;
+    bool showInfluenceMapColours = true;
+    bool showInfluenceValues = true;
     
     std::shared_ptr<GameIMap::InfluenceMap> m_imap;
     

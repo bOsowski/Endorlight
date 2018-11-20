@@ -64,6 +64,12 @@ Window* Game::GetWindow(){ return &m_window; }
 
 
 void Game::Update(){
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::V)){
+        showInfluenceValues = !showInfluenceValues;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::C)){
+        showInfluenceMapColours = !showInfluenceMapColours;
+    }
     static int updateCounterIMap =0;
     static sf::Vector2i oldPlayerPosition(0,0);
     static sf::Vector2i old_E_PlayerPosition(0,0);
@@ -161,18 +167,21 @@ void Game::Render(){
             //-1.8 = red   ...     1.8 = blue
 //            color.r=m_imap->getCellValue(j, i)*128/3+128*-1;
 //            color.g=m_imap->getCellValue(j, i)*128/3+128;
-            if(m_imap->getCellValue(j, i) < 0){
-                color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
-                color.r=-1*(m_imap->getCellValue(j, i)*128/2.5+128);
+            if(showInfluenceMapColours){
+                if(m_imap->getCellValue(j, i) < 0){
+                    color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
+                    color.r=-1*(m_imap->getCellValue(j, i)*128/2.5+128);
+                }
+                if(m_imap->getCellValue(j, i) > 0){
+                    color.r=-1*m_imap->getCellValue(j, i)*128/2.5+128;
+                    color.b=m_imap->getCellValue(j, i)*128/2.5+128;
+                }
+                if(m_imap->getCellValue(j, i) == 0){
+                    color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
+                    color.r=(m_imap->getCellValue(j, i)*128/2.5+128);
+                }
             }
-            if(m_imap->getCellValue(j, i) > 0){
-                color.r=-1*m_imap->getCellValue(j, i)*128/2.5+128;
-                color.b=m_imap->getCellValue(j, i)*128/2.5+128;
-            }
-            if(m_imap->getCellValue(j, i) == 0){
-                color.b=(m_imap->getCellValue(j, i)*128/2.5+128);
-                color.r=(m_imap->getCellValue(j, i)*128/2.5+128);
-            }
+
             m_map.rectangeOnTile(sf::Vector2i(i,j),color );
             // }
 
@@ -180,7 +189,9 @@ void Game::Render(){
         }
     //map.printOnTile(s,location);
     
-    
+    if(!showInfluenceValues){
+        sfTextArr.clear();
+    }
     m_map.printOnTileArr(sfTextArr);
     m_ePlayer.setEvilState();
     m_ePlayer.Draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
