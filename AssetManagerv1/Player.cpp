@@ -4,10 +4,6 @@
 
 // Constructor.
 Player::Player() :
-        physicsComponent(new PhysicsComponent(this)),
-        graphicsComponent(new GraphicsComponent(this)),
-        healthComponent(new HealthComponent()),
-        influenceComponent(new InfluenceComponent()),
         m_statPoints(0) {
     std::string className;
     className = "mage";

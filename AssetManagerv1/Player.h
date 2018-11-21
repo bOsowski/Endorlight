@@ -17,10 +17,11 @@
 #include "HealthComponent.hpp"
 #include "InfluenceCoponent.hpp"
 #include "Input.h"
+#include "Creature.hpp"
 
 //#include "Projectile.h"
 
-class Player : public GameObject {
+class Player : public Creature {
 public:
     /**
      * Default constructor.
@@ -40,25 +41,6 @@ public:
      * @return The player's class.
      */
     PLAYER_CLASS GetClass() const;
-
-    /**
-     * Gets the player's aim sprite.
-     * return The player's aim sprite.
-     */
-    GraphicsComponent *graphicsComponent;
-    PhysicsComponent *physicsComponent;
-    HealthComponent *healthComponent;
-    InfluenceComponent *influenceComponent;
-
-private:
-
-    /**
-     * Checks if the given movement will result in a collision.
-     * @param movement The movement to check.
-     * @param level A reference to the level object.
-     * @return True if the given movement will result in a collision.
-     */
-    bool CausesCollision(sf::Vector2f movement);
 
 private:
 

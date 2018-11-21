@@ -81,6 +81,8 @@
 		9EF4D98B2188F84D00090A3B /* Components.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E098A2F216D4D1F008EEF7F /* Components.cpp */; };
 		9EF4D98D2188FB1500090A3B /* GameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E098A2C216D4CC8008EEF7F /* GameObject.cpp */; };
 		9EFDC1E021939372003AC60C /* tileset_bw.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EFDC1DF21939371003AC60C /* tileset_bw.png */; };
+		E1D0CC9C488637BD02D7C4DF /* Creature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D0C8C8CAE4DB3EB66C60BA /* Creature.cpp */; };
+		E1D0CF7374EE3565F2ABC96D /* DamageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D0C53F0FCE624BCE602F4E /* DamageComponent.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +210,10 @@
 		9EF4D9862188F73B00090A3B /* GameCmpt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameCmpt.cpp; sourceTree = "<group>"; };
 		9EF4D9892188F75C00090A3B /* GameCmpt.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameCmpt.hpp; path = ComponentBased/GameCmpt.hpp; sourceTree = SOURCE_ROOT; };
 		9EFDC1DF21939371003AC60C /* tileset_bw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset_bw.png; sourceTree = "<group>"; };
+		E1D0C53F0FCE624BCE602F4E /* DamageComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DamageComponent.cpp; sourceTree = "<group>"; };
+		E1D0C8C8CAE4DB3EB66C60BA /* Creature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Creature.cpp; sourceTree = "<group>"; };
+		E1D0C8CFD449F2B62AA5BAB6 /* DamageComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DamageComponent.hpp; sourceTree = "<group>"; };
+		E1D0CC0D542650BA82C85653 /* Creature.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Creature.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,8 @@
 				08291BAB21A4DD6C0089A6C8 /* HealthComponent.cpp */,
 				08291BAC21A4DD6C0089A6C8 /* HealthComponent.hpp */,
 				08291B9E21A4AC350089A6C8 /* GraphicsComponent.hpp */,
+				E1D0C53F0FCE624BCE602F4E /* DamageComponent.cpp */,
+				E1D0C8CFD449F2B62AA5BAB6 /* DamageComponent.hpp */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -263,6 +271,8 @@
 				9E098A61216D7716008EEF7F /* Enemy.hpp */,
 				9E0989BC21649BCE008EEF7F /* Entity.cpp */,
 				9E0989BB21649BC6008EEF7F /* Entity.h */,
+				E1D0C8C8CAE4DB3EB66C60BA /* Creature.cpp */,
+				E1D0CC0D542650BA82C85653 /* Creature.hpp */,
 			);
 			name = game_objects;
 			sourceTree = "<group>";
@@ -688,6 +698,8 @@
 				9E0989C021649C39008EEF7F /* TextureManager.cpp in Sources */,
 				08291B9921A4AA060089A6C8 /* GameObject.cpp in Sources */,
 				08291BA521A4B1A90089A6C8 /* InputComponent.cpp in Sources */,
+				E1D0CF7374EE3565F2ABC96D /* DamageComponent.cpp in Sources */,
+				E1D0CC9C488637BD02D7C4DF /* Creature.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
