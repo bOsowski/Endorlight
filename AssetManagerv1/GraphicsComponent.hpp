@@ -11,7 +11,9 @@
 
 #include <stdio.h>
 #include "GameObject.hpp"
-#include <iostream>
+#include "enums.h"
+#include "Window.h"
+#include "TextureManager.h"
 
 class GameObject;
 class Graphics;
@@ -19,27 +21,35 @@ class Graphics;
 class GraphicsComponent
 {
 public:
-    virtual ~GraphicsComponent() {}
-    virtual void update(GameObject& obj, GraphicsComponent& graphics) = 0;
-};
-
-
-class BjornGraphicsComponent : public GraphicsComponent
-{
-public:
-    virtual void update(GameObject& obj, GraphicsComponent& graphics)
-    {
-        // Graphics code...
-    }
-};
-
-class PlayerGraphicsComponent : public GraphicsComponent
-{
-public:
-    virtual void update(GameObject& obj, GraphicsComponent& graphics)
-    {
-        // Graphics code...
-    }
+    GraphicsComponent(GameObject* gameObject);
+    int m_textureIDs[static_cast<int>(ANIMATION_STATE::COUNT)];
+    ANIMATION_STATE animState;
+    bool SetSprite(sf::Texture& texture, bool isSmooth, int frames, int frameSpeed);
+    void Update(float timeDelta) {};
+    void Draw(sf::RenderWindow &window, float timeDelta);
+    sf::Sprite& GetSprite();
+    int GetFrameCount() const;
+    bool IsAnimated();
+    void SetAnimated(bool isAnimated);
+    void updatePosition(sf::Vector2f position);
+    void setToIdle();
+    void setToWalking();
+    void draw(sf::RenderWindow &window, float timeDelta);
+    void NextFrame();
+//    sf::Sprite& GetAimSprite();
+    
+    sf::Sprite m_sprite;
+    int m_animationSpeed;
+    bool m_isAnimated;
+    int m_frameCount;
+    int m_currentFrame;
+    int m_currentTextureIndex;
+    int m_frameWidth;
+    int m_frameHeight;
+    float m_timeDelta;
+    
+private:
+    GameObject* _gameObject;
 };
 
 #endif /* GraphicsComponent_hpp */

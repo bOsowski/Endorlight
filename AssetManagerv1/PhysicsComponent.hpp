@@ -11,35 +11,22 @@
 
 #include <stdio.h>
 #include "GameObject.hpp"
+#include "Direction.hpp"
 
 class GameObject;
-class World;
 
 class PhysicsComponent
 {
 public:
-    virtual ~PhysicsComponent() {}
-    virtual void update(GameObject& obj, World& world) = 0;
+    PhysicsComponent(GameObject* gameObject);
+    
+    ~PhysicsComponent();
+    void move(Direction dir, float velocity);
+    bool moving;
+    
+private:
+    GameObject* _gameObject;
 };
 
-
-
-class BjornPhysicsComponent : public PhysicsComponent
-{
-public:
-    virtual void update(GameObject& obj, World& world)
-    {
-        // Physics code...
-    }
-};
-
-class PlayerPhysicsComponent : public PhysicsComponent
-{
-public:
-    virtual void update(GameObject& obj, World& world)
-    {
-        // Physics code...
-    }
-};
 
 #endif /* PhysicsComponent_hpp */

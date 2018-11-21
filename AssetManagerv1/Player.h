@@ -11,12 +11,16 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Entity.h"
+#include "GameObject.hpp"
+#include "GraphicsComponent.hpp"
+#include "PhysicsComponent.hpp"
+#include "HealthComponent.hpp"
+#include "InfluenceCoponent.hpp"
 #include "Input.h"
 
 //#include "Projectile.h"
 
-class Player : public Entity
+class Player : public GameObject
 {
 public:
 	/**
@@ -32,16 +36,6 @@ public:
 	 */
     void Update(float timeDelta);//, Level& level);
 
-
-	
-	/**
-	 * Set the player's health.
-	 * @param healthValue The player's new health.
-	 */
-	void SetHealth(int healthValue);
-
-
-
 	/**
 	 * Gets the player's class.
 	 * @return The player's class.
@@ -52,10 +46,11 @@ public:
 	 * Gets the player's aim sprite.
 	 * return The player's aim sprite.
 	 */
-	sf::Sprite& GetAimSprite();
-
-
-
+    GraphicsComponent* graphicsComponent;
+    PhysicsComponent* physicsComponent;
+    HealthComponent* healthComponent;
+    InfluenceComponent* influenceComponent;
+    
 private:
 
 	/**
@@ -68,7 +63,7 @@ private:
 
 private:
 
-
+    float speed = 200;
 	/**
 	* The number of stat points the entities has to distribute.
 	*/

@@ -15,7 +15,7 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800))
 //    
     
     //set up influencemap parameters
-    m_player.setInfluence(10);
+    m_player.influenceComponent->setInfluence(10);
     m_ePlayer.setInfluence(-2);
     
     
@@ -31,7 +31,7 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800))
     //    m_imap->print();
     
     m_clock.restart();
-    srand(time(nullptr));
+    srand(time(0));
     //mapSprite_ = nullptr;
     
     m_elapsed = 0.0f;
@@ -76,17 +76,17 @@ void Game::Update(){
     ++updateCounterIMap;
     m_window.Update();
     float currentTime = m_clock.restart().asSeconds();
-    float timeDelta = 0.f;
-    sf::Event event;
+//    float timeDelta = 0.f;
+//    sf::Event event;
     float newTime = m_clock.getElapsedTime().asSeconds();
-    float frameTime = std::max(0.f, newTime - currentTime);
+//    float frameTime = std::max(0.f, newTime - currentTime);
     
     
     m_player.Update(0.01);//use timeDelta, which needs to be calculated per frame
     m_ePlayer.Update(0.01);
     // Store the player position as it's used many times.
     if (updateCounterIMap%10==0){
-        sf::Vector2i playerPosition = m_map.GetActualTileLocation(m_player.GetPosition());
+        sf::Vector2i playerPosition = m_map.GetActualTileLocation(m_player.position);
         sf::Vector2i  ePlayerPosition = m_map.GetActualTileLocation(m_ePlayer.GetPosition());
         
         m_imap->clear();//if not done here,
@@ -152,10 +152,10 @@ void Game::Render(){
     // Render here.
     m_window.GetRenderWindow()->draw(this->m_map);
     // Draw the player.
-    m_player.Draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
+    m_player.graphicsComponent->draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
     
     std::stringstream stream;
-    stream << fixed <<setprecision(1) <<m_player.getInfluence();
+    stream << fixed <<setprecision(1) <<m_player.influenceComponent->getInfluence();
     string s = stream.str();
     std::vector<sf::Text> sfTextArr;
     sf::Vector2f location;

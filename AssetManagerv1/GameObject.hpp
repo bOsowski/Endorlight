@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "GraphicsComponent.hpp"
 #include "PhysicsComponent.hpp"
+#include "Window.h"
 #include "Components.hpp"
 
 class GraphicsComponent;
@@ -21,8 +22,8 @@ class InputComponent;
 class GameObject
 {
 public:
-    int velocity;
-    int x, y;
+    sf::Vector2f position;
+    float m_timeDelta;
 
     void update(World& world, GraphicsComponent& graphics){};
 };

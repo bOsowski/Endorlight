@@ -7,3 +7,25 @@
 //
 
 #include "PhysicsComponent.hpp"
+
+PhysicsComponent::PhysicsComponent(GameObject* gameObject)
+:_gameObject(gameObject)
+{}
+
+void PhysicsComponent::move(Direction dir, float velocity){
+    switch(dir){
+        case LEFT:
+            _gameObject->position.x -= velocity;
+            break;
+        case RIGHT:
+            _gameObject->position.x += velocity;
+            break;
+        case DOWN:
+            _gameObject->position.y += velocity;
+            break;
+        case UP:
+            _gameObject->position.y -= velocity;
+            break;
+    }
+    moving = true;
+}
