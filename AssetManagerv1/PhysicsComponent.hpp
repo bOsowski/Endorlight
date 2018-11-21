@@ -15,17 +15,18 @@
 
 class GameObject;
 
-class PhysicsComponent
-{
+class PhysicsComponent {
 public:
-    PhysicsComponent(GameObject* gameObject);
-    
+    PhysicsComponent(GameObject *gameObject);
+
     ~PhysicsComponent();
+
     void move(Direction dir, float velocity);
+
     bool moving;
-    
+
 private:
-    GameObject* _gameObject;
+    GameObject *_gameObject;
 };
 
 

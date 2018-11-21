@@ -11,12 +11,18 @@
 
 #include <stdio.h>
 
-class InfluenceComponent{
+class InfluenceComponent {
 public:
-    void setInfluence(float influence){m_influenceValue=influence;};
-    float getInfluence(){ return(m_influenceValue);};
-    
+    void setInfluence(float influence) {
+        m_influenceValue = influence;
+    };
+
+    float getInfluence() {
+        return (m_influenceValue);
+    };
+
 private:
     float m_influenceValue = 1;
 };
+
 #endif /* InfluenceCoponent_hpp */

@@ -8,12 +8,12 @@
 
 #include "PhysicsComponent.hpp"
 
-PhysicsComponent::PhysicsComponent(GameObject* gameObject)
-:_gameObject(gameObject)
-{}
+PhysicsComponent::PhysicsComponent(GameObject *gameObject)
+        : _gameObject(gameObject) {
+}
 
-void PhysicsComponent::move(Direction dir, float velocity){
-    switch(dir){
+void PhysicsComponent::move(Direction dir, float velocity) {
+    switch (dir) {
         case LEFT:
             _gameObject->position.x -= velocity;
             break;

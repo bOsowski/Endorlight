@@ -11,16 +11,20 @@
 
 #include <stdio.h>
 
-class HealthComponent{
+class HealthComponent {
 public:
     void setMaxHealth(float newMaxHealth);
+
     float getMaxHealth();
+
     void adjustCurrentHealth(float value);
+
     float getCurrenthealth();
-    
-    
+
+
 private:
     float _maxHealth;
     float _currentHealth;
 };
+
 #endif /* HealthComponent_hpp */

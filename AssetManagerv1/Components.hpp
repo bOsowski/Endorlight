@@ -10,21 +10,21 @@
 #define Components_hpp
 
 class Bjorn;
+
 class GameObject;
+
 class PlayerInputComponent;
 
-enum class Joystick
-{
+enum class Joystick {
     DIR_NONE,
     DIR_LEFT,
     DIR_RIGHT,
     DIR_UP,
     DIR_DOWN
-    
+
 };
 
-enum class Keyboard
-{
+enum class Keyboard {
     DIR_NONE,
     DIR_LEFT,
     DIR_RIGHT,
@@ -36,55 +36,45 @@ enum class Keyboard
     KEY_DOWN,
     KEY_ATTACK,
     KEY_ESC
-    
+
 };
 
 
-class Controller
-{
+class Controller {
 public:
-    static Joystick getJoystickDirection()
-    {
+    static Joystick getJoystickDirection() {
         // Determine which direction the user is currently
         // pressing on the joystick...
         return Joystick::DIR_NONE;
     }
-    static Keyboard getKeyboardDirection()
-    {
+
+    static Keyboard getKeyboardDirection() {
         // Determine which direction the user is currently
         // pressing on the joystick...
         return Keyboard::DIR_NONE;
     }
 };
 
-class Sprite
-{
+class Sprite {
 };
 
-class Graphics
-{
+class Graphics {
 public:
-    void draw(Sprite& sprite, int x, int y)
-    {
+    void draw(Sprite &sprite, int x, int y) {
         // Draw the sprite at the given position...
     }
 };
 
-class Volume
-{
+class Volume {
 };
 
-class World
-{
+class World {
 public:
-    void resolveCollision(Volume& volume, int& x, int& y, int& velocity)
-    {
+    void resolveCollision(Volume &volume, int &x, int &y, int &velocity) {
         // Determine what the hero is colliding with and
         // modify position and velocity if needed...
     }
 };
-
-
 
 
 #endif

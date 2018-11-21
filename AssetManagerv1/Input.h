@@ -11,32 +11,31 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-class Input
-{
+class Input {
 public:
 
-	/**
-	 * An enum denoting all possible input keys.
-	 */
-	enum class KEY
-	{
-		KEY_LEFT,
-		KEY_RIGHT,
-		KEY_UP,
-		KEY_DOWN,
+    /**
+     * An enum denoting all possible input keys.
+     */
+    enum class KEY {
+        KEY_LEFT,
+        KEY_RIGHT,
+        KEY_UP,
+        KEY_DOWN,
         KEY_E_LEFT,
         KEY_E_RIGHT,
         KEY_E_UP,
         KEY_E_DOWN,
-		KEY_ATTACK,
-		KEY_ESC
-	};
+        KEY_ATTACK,
+        KEY_ESC
+    };
 
-	/**
-	 * Checks if a given key is currently pressed.
-	 * @param keycode The key to check.
-	 * @return True if the given key is currently pressed.
-	 */
-	static bool IsKeyPressed(KEY keycode);
+    /**
+     * Checks if a given key is currently pressed.
+     * @param keycode The key to check.
+     * @return True if the given key is currently pressed.
+     */
+    static bool IsKeyPressed(KEY keycode);
 };
+
 #endif

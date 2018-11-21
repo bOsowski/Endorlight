@@ -14,11 +14,11 @@
 
 class GameObject;
 
-class InputComponent
-{
+class InputComponent {
 public:
-    void update(GameObject& GameObject) {}
-    
+    void update(GameObject &GameObject) {
+    }
+
     /**
      * Checks if a given key is currently pressed.
      * @param keycode The key to check.

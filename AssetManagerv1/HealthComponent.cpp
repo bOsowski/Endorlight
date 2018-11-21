@@ -8,26 +8,24 @@
 
 #include "HealthComponent.hpp"
 
-void HealthComponent::setMaxHealth(float newMaxHealth){
+void HealthComponent::setMaxHealth(float newMaxHealth) {
     _maxHealth = newMaxHealth;
 }
 
-float HealthComponent::getMaxHealth(){
+float HealthComponent::getMaxHealth() {
     return _maxHealth;
 }
 
-void HealthComponent::adjustCurrentHealth(float value){
-    if(_currentHealth + value < 0){
+void HealthComponent::adjustCurrentHealth(float value) {
+    if (_currentHealth + value < 0) {
         _currentHealth = 0;
-    }
-    else if(_currentHealth + value > _maxHealth){
+    } else if (_currentHealth + value > _maxHealth) {
         _currentHealth = _maxHealth;
-    }
-    else{
+    } else {
         _currentHealth += value;
     }
 }
 
-float HealthComponent::getCurrenthealth(){
+float HealthComponent::getCurrenthealth() {
     return _currentHealth;
 }
