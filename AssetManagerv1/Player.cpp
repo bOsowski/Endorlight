@@ -32,8 +32,6 @@ Player::Player() :
 void Player::Update(float timeDelta) {
     m_timeDelta = timeDelta;
     // Calculate movement speed based on the timeDelta since the last update.
-    sf::Vector2f movementSpeed(0.f, 0.f);
-//    sf::Vector2f previousPosition = m_position;
 
     // Calculate where the current movement will put us.
     if (Input::IsKeyPressed(Input::KEY::KEY_LEFT)) {

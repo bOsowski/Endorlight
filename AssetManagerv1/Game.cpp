@@ -6,16 +6,10 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800)) {
 
     ParticleSystem particleSystem(m_window.GetWindowSize());
     particleSystem.fuel(1000);
-//    sf::Clock timer;
-//    const sf::Uint32 UPDATE_STEP = 20;
-//    const sf::Uint32 MAX_UPDATE_SKIP = 5;
-//    sf::Uint32 nextUpdate = timer.getElapsedTime().asMilliseconds();
-//    sf::Vector2f lastMousePos(static_cast<sf::Vector2f>(m_window.getWindowSize()));
-//    
 
     //set up influencemap parameters
     m_player.influenceComponent->setInfluence(10);
-    m_ePlayer.setInfluence(-2);
+    m_ePlayer.influenceComponent->setInfluence(-2);
 
 
     //Influence Map related
@@ -23,7 +17,7 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800)) {
     sf::Vector2u mapDim(32, 32);//swapped x and y values due to run-time memory access error - revisit
 
 
-    m_ePlayer.SetPosition(sf::Vector2f(150, 200));
+    m_ePlayer.position = (sf::Vector2f(150, 200));
     int tileSize = 32;
     m_imap = std::make_shared<GameIMap::InfluenceMap>(mapDim.x, mapDim.y, anchorLoc.x, anchorLoc.y, tileSize);
 
@@ -31,7 +25,6 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800)) {
 
     m_clock.restart();
     srand(time(0));
-    //mapSprite_ = nullptr;
 
     m_elapsed = 0.0f;
     if (!m_map.load(resourcePath() +
@@ -82,10 +75,7 @@ void Game::Update() {
     ++updateCounterIMap;
     m_window.Update();
     float currentTime = m_clock.restart().asSeconds();
-//    float timeDelta = 0.f;
-//    sf::Event event;
     float newTime = m_clock.getElapsedTime().asSeconds();
-//    float frameTime = std::max(0.f, newTime - currentTime);
 
 
     m_player.Update(0.01);//use timeDelta, which needs to be calculated per frame
@@ -93,7 +83,7 @@ void Game::Update() {
     // Store the player position as it's used many times.
     if (updateCounterIMap % 10 == 0) {
         sf::Vector2i playerPosition = m_map.GetActualTileLocation(m_player.position);
-        sf::Vector2i ePlayerPosition = m_map.GetActualTileLocation(m_ePlayer.GetPosition());
+        sf::Vector2i ePlayerPosition = m_map.GetActualTileLocation(m_ePlayer.position);
 
         m_imap->clear();//if not done here,
         if (oldPlayerPosition != playerPosition) {
@@ -101,7 +91,7 @@ void Game::Update() {
         }
         //if enemy position changes, update influence map
         if (old_E_PlayerPosition != ePlayerPosition) {
-            m_imap->setCellValue(ePlayerPosition.x, ePlayerPosition.y, m_ePlayer.getInfluence());
+            m_imap->setCellValue(ePlayerPosition.x, ePlayerPosition.y, m_ePlayer.influenceComponent->getInfluence());
         }
         //both player and enemys need to be updated as imap has been cleared at start
         for (int i = 0; i < 2; i++) {
@@ -114,24 +104,13 @@ void Game::Update() {
             cout << "enemy imap val at position =" << m_imap->getCellValue(ePlayerPosition.x, ePlayerPosition.y)
                  << endl;
 
-        // m_imap->propagateInfluence(ePlayerPosition.x, ePlayerPosition.y, 3, GameIMap::PropCurve::Linear);
         oldPlayerPosition = playerPosition;
         old_E_PlayerPosition = ePlayerPosition;
 
     }
 
-    // if (updateCounterIMap%100==0)
-
-
     currentTime = newTime;
 
-    //    float timestep = 1.0f / m_snake.GetSpeed();
-    //    if(m_elapsed >= timestep){
-    //
-    //
-    //        m_elapsed -= timestep;
-    //
-    //    }
 }
 
 sf::Text Game::utilityFn(float val, sf::Vector2i pos) {
@@ -165,15 +144,8 @@ void Game::Render() {
     stream << fixed << setprecision(1) << m_player.influenceComponent->getInfluence();
     string s = stream.str();
     std::vector<sf::Text> sfTextArr;
-    sf::Vector2f location;
     for (auto j = 0; j < m_imap->m_iHeight; j++)
         for (auto i = 0; i < m_imap->m_iWidth; i++) {
-            location = m_map.GetActualTileLocation(j, i);
-            //if (m_imap->getCellValue(j, i)<0.0)
-            //{
-            //-1.8 = red   ...     1.8 = blue
-//            color.r=m_imap->getCellValue(j, i)*128/3+128*-1;
-//            color.g=m_imap->getCellValue(j, i)*128/3+128;
             if (showInfluenceMapColours) {
                 if (m_imap->getCellValue(j, i) < 0) {
                     color.b = (m_imap->getCellValue(j, i) * 128 / 2.5 + 128);
@@ -190,17 +162,13 @@ void Game::Render() {
             }
 
             m_map.rectangeOnTile(sf::Vector2i(i, j), color);
-            // }
-
             sfTextArr.push_back(utilityFn(m_imap->getCellValue(j, i), sf::Vector2i(j, i)));
         }
-    //map.printOnTile(s,location);
 
     if (!showInfluenceValues) {
         sfTextArr.clear();
     }
     m_map.printOnTileArr(sfTextArr);
-    m_ePlayer.setEvilState();
-    m_ePlayer.Draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
+    m_ePlayer.graphicsComponent->draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
     m_window.EndDraw();
 }
