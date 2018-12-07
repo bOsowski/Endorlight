@@ -14,6 +14,8 @@
 #include <string>
 #include "GameObject.hpp"
 
+class GameObject;
+
 class BasicComponent{
 
 public:
@@ -25,8 +27,6 @@ public:
     }
     
     virtual void update(float deltaTime);
-
-    virtual void render(sf::RenderWindow& window);
 
     GameObject* delegate;
 

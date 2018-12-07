@@ -21,8 +21,6 @@ public:
     {}
     b2Body* body;
 
-private:
-
 };
 
 #endif /* TransformComponent_hpp */

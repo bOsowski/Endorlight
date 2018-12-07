@@ -10,19 +10,22 @@
 #include "PhysicsComponent.hpp"
 #include "HealthComponent.hpp"
 #include "InfluenceCoponent.hpp"
-#include "DamageComponent.hpp"
 
 class DamageComponent;
 
 class Creature : public GameObject {
 public:
-    Creature();
+    Creature()
+            : physicsComponent(new PhysicsComponent(this)),
+              graphicsComponent(new GraphicsComponent(this)),
+              healthComponent(new HealthComponent()),
+              influenceComponent(new InfluenceComponent()) {
+    }
 
     GraphicsComponent *graphicsComponent;
     PhysicsComponent *physicsComponent;
     HealthComponent *healthComponent;
     InfluenceComponent *influenceComponent;
-    DamageComponent *damageComponent;
 
 private:
 };

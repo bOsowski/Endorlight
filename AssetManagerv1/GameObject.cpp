@@ -15,9 +15,7 @@ void GameObject::update(float deltaTime){
 }
 
 void GameObject::render(sf::RenderWindow& window){
-    for(BasicComponent* component : components){
-        component->render(window);
-    }
+
 }
 
 void GameObject::addComponent(BasicComponent* component){
