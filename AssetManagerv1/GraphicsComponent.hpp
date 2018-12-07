@@ -17,8 +17,6 @@
 
 class GameObject;
 
-class Graphics;
-
 class GraphicsComponent {
 public:
     GraphicsComponent(GameObject *gameObject);
@@ -60,7 +58,6 @@ public:
     int m_currentTextureIndex;
     int m_frameWidth;
     int m_frameHeight;
-    float m_timeDelta;
 
 private:
     GameObject *_gameObject;

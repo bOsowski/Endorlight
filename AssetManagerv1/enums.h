@@ -18,6 +18,7 @@ enum class MUSIC_TRACK {
     COUNT
 };
 
+
 // Game states.
 enum class GAME_STATE {
     MAIN_MENU,

@@ -7,3 +7,19 @@
 //
 
 #include "GameObject.hpp"
+
+void GameObject::update(float deltaTime){
+    for(BasicComponent* component : components){
+        component->update(deltaTime);
+    }
+}
+
+void GameObject::render(sf::RenderWindow& window){
+    for(BasicComponent* component : components){
+        component->render(window);
+    }
+}
+
+void GameObject::addComponent(BasicComponent* component){
+    components.push_back(component);
+}

@@ -1,27 +1,32 @@
-#pragma once
+//
+// Created by Bartosz Osowski on 07/12/2018.
+// Copyright (c) 2018 Denis Flynn. All rights reserved.
+//
+
+#ifndef ASSETMANAGERV1_ASSETMANAGER_HPP
+#define ASSETMANAGERV1_ASSETMANAGER_HPP
+
 #include <map>
+#include <string>
+#include <SFML/Graphics/Sprite.hpp>
 
-#include <SFML/Graphics.hpp>
 
-namespace GameDevCpp {
-    class AssetManager
+class AssetManager {
+
+public:
+    static AssetManager& instance()
     {
-    public:
-        AssetManager(){}
-        ~AssetManager(){}
-        void loadTexture(std::string name, std::string fileName);
-        sf::Texture &GetTexture(std::string name);
-        
-        void loadFont(std::string name, std::string fileName);
-        sf::Font &GetFont(std::string name);
-        
-        private:
-        
-            std::map<std::string, sf::Texture> textures_;
-            std::map<std::string, sf::Font> fonts_;
-        
-        
-    };
+        static AssetManager *instance = new AssetManager();
+        return *instance;
+    }
 
-    
-}
+    std::map<std::string, sf::Sprite> textures;
+    std::map<std::string, std::vector<sf::Sprite>> animations;
+
+private:
+    AssetManager();
+
+};
+
+
+#endif //ASSETMANAGERV1_ASSETMANAGER_HPP

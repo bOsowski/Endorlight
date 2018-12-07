@@ -13,6 +13,11 @@
 		08291BA521A4B1A90089A6C8 /* InputComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08291BA321A4B1A90089A6C8 /* InputComponent.cpp */; };
 		08291BAD21A4DD6C0089A6C8 /* HealthComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08291BAB21A4DD6C0089A6C8 /* HealthComponent.cpp */; };
 		08291BB021A4DF6B0089A6C8 /* InfluenceCoponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08291BAE21A4DF6B0089A6C8 /* InfluenceCoponent.cpp */; };
+		0CE5CCBB21BAEFE5007072A5 /* TextureComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5CCB921BAEFE5007072A5 /* TextureComponent.cpp */; };
+		0CE5CCC021BB09BA007072A5 /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CE5CCBF21BB09BA007072A5 /* libBox2D.a */; };
+		0CE5CCC321BB09DC007072A5 /* TransformComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CE5CCC121BB09DC007072A5 /* TransformComponent.cpp */; };
+		7D93993289D00A7F9C9E05AA /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D939BC79B99A68616B4A495 /* AssetManager.cpp */; };
+		7D939EC00C104E758F3C46ED /* AnimationComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D939038AE497115149F5983 /* AnimationComponent.cpp */; };
 		9E0989B3216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0989B2216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png */; };
 		9E0989B5216495B9008EEF7F /* Sprite-0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0989B4216495B9008EEF7F /* Sprite-0001.png */; };
 		9E0989B82164991A008EEF7F /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E0989B62164991A008EEF7F /* Object.cpp */; };
@@ -87,7 +92,16 @@
 		08291BAC21A4DD6C0089A6C8 /* HealthComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HealthComponent.hpp; sourceTree = "<group>"; };
 		08291BAE21A4DF6B0089A6C8 /* InfluenceCoponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InfluenceCoponent.cpp; sourceTree = "<group>"; };
 		08291BAF21A4DF6B0089A6C8 /* InfluenceCoponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InfluenceCoponent.hpp; sourceTree = "<group>"; };
-		0CE5CCB521BADBF0007072A5 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		0CE5CCB521BADBF0007072A5 /* BasicComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BasicComponent.hpp; sourceTree = "<group>"; };
+		0CE5CCB921BAEFE5007072A5 /* TextureComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureComponent.cpp; sourceTree = "<group>"; };
+		0CE5CCBA21BAEFE5007072A5 /* TextureComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TextureComponent.hpp; sourceTree = "<group>"; };
+		0CE5CCBF21BB09BA007072A5 /* libBox2D.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBox2D.a; sourceTree = "<group>"; };
+		0CE5CCC121BB09DC007072A5 /* TransformComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TransformComponent.cpp; sourceTree = "<group>"; };
+		0CE5CCC221BB09DC007072A5 /* TransformComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TransformComponent.hpp; sourceTree = "<group>"; };
+		7D939038AE497115149F5983 /* AnimationComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationComponent.cpp; sourceTree = "<group>"; };
+		7D939238BECD05D2CF335932 /* AssetManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
+		7D9395F7AE4C0225315EAC4D /* AnimationComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimationComponent.hpp; sourceTree = "<group>"; };
+		7D939BC79B99A68616B4A495 /* AssetManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
 		9E0989B2216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rogue spritesheet calciumtrice_0.png"; sourceTree = "<group>"; };
 		9E0989B4216495B9008EEF7F /* Sprite-0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprite-0001.png"; sourceTree = "<group>"; };
 		9E0989B62164991A008EEF7F /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
@@ -185,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE5CCC021BB09BA007072A5 /* libBox2D.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +218,13 @@
 			children = (
 				08291B9A21A4ABEF0089A6C8 /* PhysicsComponent.cpp */,
 				08291BAE21A4DF6B0089A6C8 /* InfluenceCoponent.cpp */,
-				0CE5CCB521BADBF0007072A5 /* Component.hpp */,
+				0CE5CCB521BADBF0007072A5 /* BasicComponent.hpp */,
+				0CE5CCB921BAEFE5007072A5 /* TextureComponent.cpp */,
+				0CE5CCBA21BAEFE5007072A5 /* TextureComponent.hpp */,
 				08291BAF21A4DF6B0089A6C8 /* InfluenceCoponent.hpp */,
 				08291BA321A4B1A90089A6C8 /* InputComponent.cpp */,
+				0CE5CCC121BB09DC007072A5 /* TransformComponent.cpp */,
+				0CE5CCC221BB09DC007072A5 /* TransformComponent.hpp */,
 				08291BA721A4B5020089A6C8 /* Components.hpp */,
 				08291BA421A4B1A90089A6C8 /* InputComponent.hpp */,
 				08291B9B21A4ABEF0089A6C8 /* PhysicsComponent.hpp */,
@@ -215,6 +234,8 @@
 				08291B9E21A4AC350089A6C8 /* GraphicsComponent.hpp */,
 				E1D0C53F0FCE624BCE602F4E /* DamageComponent.cpp */,
 				E1D0C8CFD449F2B62AA5BAB6 /* DamageComponent.hpp */,
+				7D939038AE497115149F5983 /* AnimationComponent.cpp */,
+				7D9395F7AE4C0225315EAC4D /* AnimationComponent.hpp */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -284,6 +305,8 @@
 				9E098A33216D711C008EEF7F /* Level.hpp */,
 				9E4C469F2152212400D556FD /* Game.cpp */,
 				9E4C46952152212200D556FD /* Game.h */,
+				7D939BC79B99A68616B4A495 /* AssetManager.cpp */,
+				7D939238BECD05D2CF335932 /* AssetManager.hpp */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -294,6 +317,14 @@
 				08291BAA21A4C3280089A6C8 /* Direction.hpp */,
 			);
 			name = enums;
+			sourceTree = "<group>";
+		};
+		0CE5CCBE21BB09B0007072A5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				0CE5CCBF21BB09BA007072A5 /* libBox2D.a */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 		9E098A35216D742B008EEF7F /* tiles */ = {
@@ -371,6 +402,7 @@
 		9E4C43CB214EE2CE00D556FD /* AssetManagerv1 */ = {
 			isa = PBXGroup;
 			children = (
+				0CE5CCBE21BB09B0007072A5 /* libs */,
 				08291BA921A4C30B0089A6C8 /* enums */,
 				08291B9021A49DAF0089A6C8 /* components */,
 				08291B9121A49DBE0089A6C8 /* game_objects */,
@@ -595,6 +627,7 @@
 				08291BB021A4DF6B0089A6C8 /* InfluenceCoponent.cpp in Sources */,
 				9E8768AA2198BD2100C0D9D0 /* particle.cpp in Sources */,
 				9E098A62216D7716008EEF7F /* Enemy.cpp in Sources */,
+				0CE5CCC321BB09DC007072A5 /* TransformComponent.cpp in Sources */,
 				08291B9F21A4AC350089A6C8 /* GraphicsComponent.cpp in Sources */,
 				9E098AC32175FAB6008EEF7F /* evilPlayer.cpp in Sources */,
 				9E098A34216D711C008EEF7F /* Level.cpp in Sources */,
@@ -606,6 +639,7 @@
 				9E4C46A72152212400D556FD /* Main_cmpt.cpp in Sources */,
 				08291B9C21A4ABEF0089A6C8 /* PhysicsComponent.cpp in Sources */,
 				08291BAD21A4DD6C0089A6C8 /* HealthComponent.cpp in Sources */,
+				0CE5CCBB21BAEFE5007072A5 /* TextureComponent.cpp in Sources */,
 				9E0989BD21649BCF008EEF7F /* Entity.cpp in Sources */,
 				9E4C46A62152212400D556FD /* Game.cpp in Sources */,
 				9E0989C021649C39008EEF7F /* TextureManager.cpp in Sources */,
@@ -613,6 +647,8 @@
 				08291BA521A4B1A90089A6C8 /* InputComponent.cpp in Sources */,
 				E1D0CF7374EE3565F2ABC96D /* DamageComponent.cpp in Sources */,
 				E1D0CC9C488637BD02D7C4DF /* Creature.cpp in Sources */,
+				7D939EC00C104E758F3C46ED /* AnimationComponent.cpp in Sources */,
+				7D93993289D00A7F9C9E05AA /* AssetManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,8 +809,17 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+					/usr/local/include/Box2D,
+				);
 				INFOPLIST_FILE = "AssetManagerv1/AssetManagerv1-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AssetManagerv1/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -786,8 +831,17 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+					/usr/local/include/Box2D,
+				);
 				INFOPLIST_FILE = "AssetManagerv1/AssetManagerv1-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AssetManagerv1/libs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

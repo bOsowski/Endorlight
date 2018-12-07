@@ -3,4 +3,6 @@
 // Copyright (c) 2018 Denis Flynn. All rights reserved.
 //
 
-#include "AssetManager.hpp"
+#include "AnimationComponent.hpp"
+
+
