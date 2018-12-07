@@ -26,7 +26,7 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800)) {
     m_clock.restart();
     srand(time(0));
 
-    m_elapsed = 0.0f;
+    m_deltaTime = 0.0f;
     if (!m_map.load(resourcePath() +
             "tileset_bw.png", sf::Vector2u(tileSize, tileSize), level, 32, 32))
         return;
@@ -46,15 +46,15 @@ Game::Game() : m_window("Tiling", sf::Vector2u(1280, 800)) {
 
 }
 
+float Game::deltaTime(){
+    return m_deltaTime;
+}
+
 Game::~Game() {
 }
 
-sf::Time Game::GetElapsed() {
-    return m_clock.getElapsedTime();
-}
-
 void Game::RestartClock() {
-    m_elapsed += m_clock.restart().asSeconds();
+    m_deltaTime += m_clock.restart().asSeconds();
 }
 
 Window *Game::GetWindow() {
@@ -138,7 +138,7 @@ void Game::Render() {
     // Render here.
     m_window.GetRenderWindow()->draw(this->m_map);
     // Draw the player.
-    m_player.graphicsComponent->draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
+    m_player.graphicsComponent->draw(*m_window.GetRenderWindow());
 
     std::stringstream stream;
     stream << fixed << setprecision(1) << m_player.influenceComponent->getInfluence();
@@ -169,6 +169,6 @@ void Game::Render() {
         sfTextArr.clear();
     }
     m_map.printOnTileArr(sfTextArr);
-    m_ePlayer.graphicsComponent->draw(*m_window.GetRenderWindow(), m_player.m_timeDelta);
+    m_ePlayer.graphicsComponent->draw(*m_window.GetRenderWindow());
     m_window.EndDraw();
 }

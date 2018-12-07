@@ -9,8 +9,6 @@
 #include "evilPlayer.hpp"
 
 void evilPlayer::Update(float timeDelta) {
-    m_timeDelta = timeDelta;
-
     // Calculate where the current movement will put us.
     if (Input::IsKeyPressed(Input::KEY::KEY_E_LEFT)) {
         physicsComponent->move(LEFT, speed * timeDelta);

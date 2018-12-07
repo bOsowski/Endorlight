@@ -26,7 +26,6 @@ Player::Player() :
 
 // Updates the player object.
 void Player::Update(float timeDelta) {
-    m_timeDelta = timeDelta;
     // Calculate movement speed based on the timeDelta since the last update.
 
     // Calculate where the current movement will put us.

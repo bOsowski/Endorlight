@@ -22,19 +22,7 @@ void GraphicsComponent::NextFrame() {
 
 
 // Draws the object to the given render window.
-void GraphicsComponent::draw(sf::RenderWindow &window, float timeDelta) {
-    // check if the sprite is animated
-    if (m_isAnimated) {
-        // add the elapsed time since the last draw call to the aggregate
-        m_timeDelta += timeDelta;
-
-        // check if the frame should be updated
-        if (m_timeDelta >= (1.f / m_animationSpeed)) {
-            NextFrame();
-            m_timeDelta = 0;
-        }
-    }
-
+void GraphicsComponent::draw(sf::RenderWindow &window) {
     window.draw(m_sprite);
 }
 

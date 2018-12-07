@@ -16,16 +16,12 @@
 #include "Components.hpp"
 
 class GraphicsComponent;
-
 class PhysicsComponent;
-
 class InputComponent;
 
 class GameObject {
 public:
     sf::Vector2f position;
-    float m_timeDelta;
-
     void update(World &world, GraphicsComponent &graphics) {
     };
 };

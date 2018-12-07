@@ -25,8 +25,8 @@ public:
     bool IsRunning() {
         return m_isRunning;
     }
-
-    sf::Time GetElapsed();
+    
+    float deltaTime();
 
     void RestartClock();
 
@@ -69,7 +69,8 @@ private:
     bool m_isRunning; //want to be able to quit gameloop
 
     sf::Clock m_clock;
-    float m_elapsed;
+    float m_deltaTime;
+    
     TileMap m_map;
     sf::Sprite mapSprite_;
     std::vector<int> level =

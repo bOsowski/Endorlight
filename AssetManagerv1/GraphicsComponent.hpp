@@ -47,7 +47,7 @@ public:
 
     void setToWalking();
 
-    void draw(sf::RenderWindow &window, float timeDelta);
+    void draw(sf::RenderWindow &window);
 
     void NextFrame();
 //    sf::Sprite& GetAimSprite();

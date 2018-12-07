@@ -87,6 +87,7 @@
 		08291BAC21A4DD6C0089A6C8 /* HealthComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HealthComponent.hpp; sourceTree = "<group>"; };
 		08291BAE21A4DF6B0089A6C8 /* InfluenceCoponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InfluenceCoponent.cpp; sourceTree = "<group>"; };
 		08291BAF21A4DF6B0089A6C8 /* InfluenceCoponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InfluenceCoponent.hpp; sourceTree = "<group>"; };
+		0CE5CCB521BADBF0007072A5 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		9E0989B2216494B9008EEF7F /* rogue spritesheet calciumtrice_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rogue spritesheet calciumtrice_0.png"; sourceTree = "<group>"; };
 		9E0989B4216495B9008EEF7F /* Sprite-0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sprite-0001.png"; sourceTree = "<group>"; };
 		9E0989B62164991A008EEF7F /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 			children = (
 				08291B9A21A4ABEF0089A6C8 /* PhysicsComponent.cpp */,
 				08291BAE21A4DF6B0089A6C8 /* InfluenceCoponent.cpp */,
+				0CE5CCB521BADBF0007072A5 /* Component.hpp */,
 				08291BAF21A4DF6B0089A6C8 /* InfluenceCoponent.hpp */,
 				08291BA321A4B1A90089A6C8 /* InputComponent.cpp */,
 				08291BA721A4B5020089A6C8 /* Components.hpp */,
